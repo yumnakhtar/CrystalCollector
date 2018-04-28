@@ -12,6 +12,7 @@ Access the folder with the content of this project and double click on the index
 * JAVASCRIPT
 * CSS
 * JQUERY
+* BOOTSTRAP
 
 
 
