@@ -1,32 +1,48 @@
+//allow html to run, then proceed with js
 $(document).ready(function() {
 
-//create variable in html. rest is in js
-    //crystals 1-4 (1-12) need to be buttons
-    var crystal1;
-    var crystal2;
-    var crystal3;
-    var crystal4;
-    // generating num (1-12)->  Math.floor((Math.random() * 12) + 1);
-    //randomly generated number (19-120)
-    var randomNum = Math.floor((Math.random() * 12) + 1);
-    // generating num(19-120)-> var x = Math.floor((Math.random() * 120) + 19);
-    //players guess
+    //crystals 1-4 (1-12) need to be buttons, values not shown
+    var crystal1 = Math.floor((Math.random() * 12) + 1);
+    var crystal2 = Math.floor((Math.random() * 12) + 1);
+    var crystal3 = Math.floor((Math.random() * 12) + 1);
+    var crystal4 = Math.floor((Math.random() * 12) + 1);
+    //randomly generated number that displays
+    var randomNum = Math.floor((Math.random() * 120) + 19);
     var userGuess = 0;
-    //wins
     var win = 0;
-    //loses
     var loses = 0;
-//add on click for each crystal
-//add that value to players guess
-    //continuously compare users guess to computer generated number
-    //if equal, win increment
-    //if user guess is greater, losses increment
 
+    //show random num, and 4 crystal values in console.
     console.log("Random number: " + randomNum);
+    console.log("Crystal 1: " + crystal1);
+    console.log("Crystal 2: " + crystal2);
+    console.log("Crystal 3: " + crystal3);
+    console.log("Crystal 4: " + crystal4);
 
-    $("button").on("click", function () {
+
+//////////how do i give crystals a rndom value here and portray it to html. how do I connect random to button???///////////////////////////
+
+    //reads the buttons being clicked
+    $("button").on("click", function(){
+        //catch value of the certain crystal
+        //add crystal value to userGuess
+        //print user guess onto DOM
+
+        //compare userGUess to randomNum
+        if (userGuess === randomNum){
+            win++;
+            console.log("wins: " + wins);
+            alert("You won!")
+        }
+        if (userGuess >= randomNum){
+            loses++;
+            console.log("loses: " + loses);
+            alert("You lost!");
+        }
+
 
     });
+
 
 
 
