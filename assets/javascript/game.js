@@ -29,44 +29,47 @@ $(document).ready(function() {
             console.log("wins: " + wins);
             alert("You won!")
         }
-        if (userGuess >= randomNum){
+        else if (userGuess >= randomNum){
             loses++;
             console.log("loses: " + loses);
             alert("You lost!");
+        }
+        else {
+            alert("keep going, you're at: " + userGuess);
         }
 }
     //reads the buttons being clicked
     $("#c1").on("click", function(){
         //catch value of the certain crystal
-        //add crystal value to userGuess
-        //print user guess onto DOM
         $("#c1").val(crystal1);
-        alert("the value of this is: " + crystal1);
-        userGUess+=;
+        //add crystal value to userGuess
+        userGuess += crystal1;
+        //alert("the value of this is: " + crystal1);
+        compare();
     });
     $("#c2").on("click", function(){
         //catch value of the certain crystal
-        //add crystal value to userGuess
-        //print user guess onto DOM
         $("#c1").val(crystal2);
-        alert("the value of this is: " + crystal2);
-        userGUess+=;
+        //add crystal value to userGuess
+        userGuess+= crystal2;
+        //alert("the value of this is: " + crystal2);
+        compare();
     });
     $("#c3").on("click", function(){
         //catch value of the certain crystal
-        //add crystal value to userGuess
-        //print user guess onto DOM
         $("#c1").val(crystal3);
-        alert("the value of this is: " + crystal3);
-        userGUess+=;
+        //add crystal value to userGuess
+        userGuess+= crystal3;
+        //alert("the value of this is: " + crystal3);
+        compare();
     });
     $("#c4").on("click", function(){
         //catch value of the certain crystal
-        //add crystal value to userGuess
-        //print user guess onto DOM
         $("#c1").val(crystal4);
-        alert("the value of this is: " + crystal4);
-        userGUess+=;
+        //add crystal value to userGuess
+        userGuess+= crystal4;
+        //alert("the value of this is: " + crystal4);
+        compare();
     });
 
 
