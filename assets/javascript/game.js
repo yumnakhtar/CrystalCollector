@@ -22,12 +22,7 @@ $(document).ready(function() {
 
 //////////how do i give crystals a rndom value here and portray it to html. how do I connect random to button???///////////////////////////
 
-    //reads the buttons being clicked
-    $("button").on("click", function(){
-        //catch value of the certain crystal
-        //add crystal value to userGuess
-        //print user guess onto DOM
-
+    function compare(){
         //compare userGUess to randomNum
         if (userGuess === randomNum){
             win++;
@@ -39,12 +34,40 @@ $(document).ready(function() {
             console.log("loses: " + loses);
             alert("You lost!");
         }
-
-
+}
+    //reads the buttons being clicked
+    $("#c1").on("click", function(){
+        //catch value of the certain crystal
+        //add crystal value to userGuess
+        //print user guess onto DOM
+        $("#c1").val(crystal1);
+        alert("the value of this is: " + crystal1);
+        userGUess+=;
     });
-
-
-
+    $("#c2").on("click", function(){
+        //catch value of the certain crystal
+        //add crystal value to userGuess
+        //print user guess onto DOM
+        $("#c1").val(crystal2);
+        alert("the value of this is: " + crystal2);
+        userGUess+=;
+    });
+    $("#c3").on("click", function(){
+        //catch value of the certain crystal
+        //add crystal value to userGuess
+        //print user guess onto DOM
+        $("#c1").val(crystal3);
+        alert("the value of this is: " + crystal3);
+        userGUess+=;
+    });
+    $("#c4").on("click", function(){
+        //catch value of the certain crystal
+        //add crystal value to userGuess
+        //print user guess onto DOM
+        $("#c1").val(crystal4);
+        alert("the value of this is: " + crystal4);
+        userGUess+=;
+    });
 
 
 
