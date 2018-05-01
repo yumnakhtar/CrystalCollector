@@ -1,0 +1,43 @@
+body {
+background-image: url(https://simpsonentreamis.files.wordpress.com/2015/12/background-donut-the-simpsons-wallpaper-favim-com-2619736.jpg);
+}
+
+img {
+    width: 85%;
+    height: 680px;
+    margin-left: 7.5%;
+    margin-right: auto;
+    margin-top: 2.5%;
+    padding:1px;
+    border:1px solid #021a40;
+    background-color:#ffddf5;
+}
+
+.centered {
+    font-family: 'Kalam', cursive;
+    position: absolute;
+    top: 43%;
+    left: 48%;
+    transform: translate(-40%, -60%);
+    font-size: 50px;
+}
+
+.container {
+    background-color: #ffe4d3;
+    width: 85%
+}
+
+#collector {
+    font-family: 'Kalam', cursive;
+    font-size: 70px;
+    margin-left: 280px;
+    margin-top: 30px;
+}
+
+.instructions {
+    font-family: 'Kalam', cursive;
+    font-size: 30px;
+    margin-top: 40px;
+    margin-left: 45px;
+    text-align: center;
+}
