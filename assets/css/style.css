@@ -2,7 +2,7 @@ body {
 background-image: url(https://simpsonentreamis.files.wordpress.com/2015/12/background-donut-the-simpsons-wallpaper-favim-com-2619736.jpg);
 }
 
-img {
+.watching {
     width: 85%;
     height: 680px;
     margin-left: 7.5%;
@@ -24,7 +24,8 @@ img {
 
 .container {
     background-color: #ffe4d3;
-    width: 85%
+    width: 85%;
+    margin-bottom: 2.5%;
 }
 
 #collector {
@@ -37,7 +38,13 @@ img {
 .instructions {
     font-family: 'Kalam', cursive;
     font-size: 30px;
-    margin-top: 40px;
-    margin-left: 45px;
+    /* margin-top: 40px;
+    margin-left: 45px; */
+    margin: 40px;
     text-align: center;
+}
+
+.d1 {
+    width: 150px;
+    height: 150px;
 }
