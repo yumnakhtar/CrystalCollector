@@ -26,6 +26,7 @@ background-image: url(https://simpsonentreamis.files.wordpress.com/2015/12/backg
     background-color: #ffe4d3;
     width: 85%;
     margin-bottom: 2.5%;
+    padding-bottom: 25px;
 }
 
 #collector {
@@ -44,7 +45,15 @@ background-image: url(https://simpsonentreamis.files.wordpress.com/2015/12/backg
     text-align: center;
 }
 
+button {
+    background-color: transparent;
+    border-color: transparent;
+}
 .d1 {
     width: 150px;
     height: 150px;
+}
+
+.four {
+    margin-left: 35px;
 }

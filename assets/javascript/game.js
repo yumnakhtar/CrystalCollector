@@ -35,8 +35,8 @@ $(document).ready(function() {
             alert("You lost!");
         }
         else {
-            alert("keep going, you're at: " + userGuess);
-        }
+            alert("keep going, you're at: " + userGuess+ "\n" + "You need: " + randomNum);
+        } 
 }
     //reads the buttons being clicked
     $("#c1").on("click", function(){
