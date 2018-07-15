@@ -1,6 +1,6 @@
 # CrystalCollector
 
-THis is a bit more complex project than the last project. This project has the computer generate a random number. There are 4 crystals worth a hidden value. The user must accumulate the value of the randomly generated number using these crystals. If the number matches, user wins. If the number goes over the computer generated numve, the user looses. 
+THis is a bit more complex project than the last project. This project has the computer generate a random number. There are 4 donuts worth a hidden value. The user must accumulate the value of the randomly generated number using these donuts. If the number matches, user wins. If the number goes over the computer generated numve, the user looses. 
 
 ## Getting Started
 
