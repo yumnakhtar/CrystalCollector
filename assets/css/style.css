@@ -53,8 +53,16 @@ button {
 }
 
 .d1:hover {
-    width: 155px;
-    height: 155px;
+    width: 145px;
+    height: 145px;
+}
+
+.d1:active {
+    padding-top: 10px;
+}
+
+button:focus {
+    outline: 0;
 }
 
 .four {
