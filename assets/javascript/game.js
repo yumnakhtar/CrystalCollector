@@ -1,7 +1,6 @@
 //allow html to run, then proceed with js
 $(document).ready(function() {
 
-
     var randomNum, donut1, donut2, donut3, donut4;
     var userGuess = 0;
     var win = 0;
@@ -41,18 +40,21 @@ $(document).ready(function() {
             return;
         } 
     }
+
     //donut 1 click
     $("#c1").on("click", function(){
         userGuess += donut1;
         $(".added").text(userGuess)
         compare();
     });
+
     //donut 2 click
     $("#c2").on("click", function(){
         userGuess+= donut2;
         $(".added").text(userGuess)
         compare();
     });
+
     //donut 3 click
     $("#c3").on("click", function(){
 
@@ -60,6 +62,7 @@ $(document).ready(function() {
         $(".added").text(userGuess)
         compare();
     });
+    
     //donut 4 click
     $("#c4").on("click", function(){
         userGuess+= donut4;
