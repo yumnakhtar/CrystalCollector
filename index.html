@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Sprinkle Collector</title>
     <!-- Required meta tags -->
@@ -7,12 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
     <!-- .cc and .j files -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -21,45 +26,82 @@
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Handlee|Indie+Flower" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
 </head>
+
 <body>
-<div class="picture">
-    <img class="watching" src="assets/images/watching-1.jpg" alt="Simpsons-Family">
-    <div class="centered">Oh! Are those donuts?</div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-12"  id="collector"> Sprinkle 'em on!
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-11 instructions">So here's the deal. You've just arrived at the Simpon's for dinner and brought a box of donuts. The problem is, there are no sprinkles! Oh the horror! Now, it's your job to put the right amount of sprinkles on each donut. All you have to do is click on the button and accumulate the right amount of sprinkles on each donut. Now remember, don't put more sprinkles than you've been asked. We don't want to upset our hosts.  </div>
-    </div>
-    <div class="row four">
-        <div class="col-md-3">  
-            <button id="c1"> 
-                <img class="d1" src="assets/images/1-donut.png" alt="Donut 1">
-            </button>
-        </div>  
-        <div class="col-md-3">  
-            <button id="c2"> 
-                <img class="d1" src="assets/images/2-donut.png" alt="Donut 2">
-            </button>
-        </div>
-        <div class="col-md-3">  
-            <button id="c3"> 
-                <img class="d1" src="assets/images/3-donut.png" alt="Donut 3">
-            </button>
-        </div>
-        <div class="col-md-3">  
-            <button id="c4"> 
-                <img class="d1" src="assets/images/4-donut.png" alt="Donut 4">
-            </button>
-        </div>
-
-
+    <div class="picture">
+        <img class="watching" src="assets/images/watching-1.jpg" alt="Simpsons-Family">
+        <div class="centered">Oh! Are those donuts?</div>
     </div>
 
-</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" id="collector"> Sprinkle 'em on!
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-11 instructions">So here's the deal. You've just arrived at the Simpon's for dinner and brought a box of donuts. The problem is,
+                there are no sprinkles! Oh the horror! Now, it's your job to put the right amount of sprinkles on each donut.
+                All you have to do is click on the donuts and accumulate the right amount of sprinkles. Now
+                remember, don't put more sprinkles than you've been asked. We don't want to upset our hosts. </div>
+        </div>
+        <div class="row stats">
+            <div class="col-md-3"></div>
+            <div class="col-md-4">
+                <div class="res">
+                    <p>Requested Amount: </p>
+                    <p class="requested"></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="res">
+                    <p>You've Added: </p>
+                    <p class="added"></p>
+                </div>
+            </div>
+        </div>
+        <div class="row four">
+            <!-- donut 1 -->
+            <div class="col-md-3">
+                <button id="c1">
+                    <img class="d1" src="assets/images/1-donut.png" alt="Donut 1">
+                </button>
+            </div>
+            <!-- donut 2 -->
+            <div class="col-md-3">
+                <button id="c2">
+                    <img class="d1" src="assets/images/2-donut.png" alt="Donut 2">
+                </button>
+            </div>
+            <!-- donut 3 -->
+            <div class="col-md-3">
+                <button id="c3">
+                    <img class="d1" src="assets/images/3-donut.png" alt="Donut 3">
+                </button>
+            </div>
+            <!-- donut 4 -->
+            <div class="col-md-3">
+                <button id="c4">
+                    <img class="d1" src="assets/images/4-donut.png" alt="Donut 4">
+                </button>
+            </div>
+        </div>
+        <div class="row stats">
+            <div class="col-md-3"></div>
+            <div class="col-md-4">
+                <div class="res">
+                    <p>Success Stories: </p>
+                    <p class="win"></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="res">
+                    <p>Failures: </p>
+                    <p class="loss"></p>
+                </div>
+            </div>
+            </div>
+
+    </div>
 </body>
+
 </html>

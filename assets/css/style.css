@@ -1,5 +1,9 @@
 body {
 background-image: url(https://simpsonentreamis.files.wordpress.com/2015/12/background-donut-the-simpsons-wallpaper-favim-com-2619736.jpg);
+/* height: 100%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover; */
 }
 
 .watching {
@@ -32,15 +36,13 @@ background-image: url(https://simpsonentreamis.files.wordpress.com/2015/12/backg
 #collector {
     font-family: 'Kalam', cursive;
     font-size: 70px;
-    margin-left: 280px;
+    text-align: center;
     margin-top: 30px;
 }
 
 .instructions {
     font-family: 'Kalam', cursive;
     font-size: 30px;
-    /* margin-top: 40px;
-    margin-left: 45px; */
     margin: 40px;
     text-align: center;
 }
@@ -56,4 +58,10 @@ button {
 
 .four {
     margin-left: 35px;
+}
+
+.res {
+    font-family: 'Kalam', cursive;
+    float: left;
+    text-align: center;
 }

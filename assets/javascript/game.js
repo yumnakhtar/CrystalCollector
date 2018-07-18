@@ -1,78 +1,71 @@
 //allow html to run, then proceed with js
 $(document).ready(function() {
 
-    //crystals 1-4 (1-12) need to be buttons, values not shown
-    var crystal1 = Math.floor((Math.random() * 12) + 1);
-    var crystal2 = Math.floor((Math.random() * 12) + 1);
-    var crystal3 = Math.floor((Math.random() * 12) + 1);
-    var crystal4 = Math.floor((Math.random() * 12) + 1);
-    //randomly generated number that displays
-    var randomNum = Math.floor((Math.random() * 120) + 19);
+
+    var randomNum, donut1, donut2, donut3, donut4;
     var userGuess = 0;
     var win = 0;
     var loses = 0;
 
-    //show random num, and 4 crystal values in console.
-    console.log("Random number: " + randomNum);
-    console.log("Crystal 1: " + crystal1);
-    console.log("Crystal 2: " + crystal2);
-    console.log("Crystal 3: " + crystal3);
-    console.log("Crystal 4: " + crystal4);
+    $(".win").text("0")
+    $(".loss").text("0")
 
+    numGenerater = function() {
+        //requested number of sprinkles (19-120)
+        randomNum = Math.floor((Math.random() * 120) + 19);
+        //donuts 1-4 (values of 1-12)
+        donut1 = Math.floor((Math.random() * 12) + 1);
+        donut2 = Math.floor((Math.random() * 12) + 1);
+        donut3 = Math.floor((Math.random() * 12) + 1);
+        donut4 = Math.floor((Math.random() * 12) + 1);
+        $(".requested").text(randomNum);
+        $(".added").text("0")
+        userGuess = 0;
+    }
 
-//////////how do i give crystals a rndom value here and portray it to html. how do I connect random to button???///////////////////////////
-
+    //compare userGuess to randomNum
     function compare(){
-        //compare userGUess to randomNum
         if (userGuess === randomNum){
             win++;
-            console.log("wins: " + wins);
-            alert("You won!")
+            $(".win").text(win)
+            $(".instructions").text("You're doing great! You got exactly " + randomNum + " sprinkles! Carry on sprinkling..")
+            numGenerater()
         }
         else if (userGuess >= randomNum){
             loses++;
-            console.log("loses: " + loses);
-            alert("You lost!");
+            $(".loss").text(loses)
+            $(".instructions").text("D'oh! You put too many sprinkles! Your hosts wanted " + randomNum + " and you gave them " + userGuess + ".. But they wanna give you another chance! Keep sprinkling to see if you can get it this time!")
+            numGenerater()
         }
         else {
-            alert("keep going, you're at: " + userGuess+ "\n" + "You need: " + randomNum);
+            return;
         } 
-}
-    //reads the buttons being clicked
+    }
+    //donut 1 click
     $("#c1").on("click", function(){
-        //catch value of the certain crystal
-        $("#c1").val(crystal1);
-        //add crystal value to userGuess
-        userGuess += crystal1;
-        //alert("the value of this is: " + crystal1);
+        userGuess += donut1;
+        $(".added").text(userGuess)
         compare();
     });
+    //donut 2 click
     $("#c2").on("click", function(){
-        //catch value of the certain crystal
-        $("#c1").val(crystal2);
-        //add crystal value to userGuess
-        userGuess+= crystal2;
-        //alert("the value of this is: " + crystal2);
+        userGuess+= donut2;
+        $(".added").text(userGuess)
         compare();
     });
+    //donut 3 click
     $("#c3").on("click", function(){
-        //catch value of the certain crystal
-        $("#c1").val(crystal3);
-        //add crystal value to userGuess
-        userGuess+= crystal3;
-        //alert("the value of this is: " + crystal3);
+
+        userGuess+= donut3;
+        $(".added").text(userGuess)
         compare();
     });
+    //donut 4 click
     $("#c4").on("click", function(){
-        //catch value of the certain crystal
-        $("#c1").val(crystal4);
-        //add crystal value to userGuess
-        userGuess+= crystal4;
-        //alert("the value of this is: " + crystal4);
+        userGuess+= donut4;
+        $(".added").text(userGuess)
         compare();
     });
 
-
-
-
+    numGenerater();
 });
